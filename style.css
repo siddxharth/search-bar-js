@@ -10,13 +10,12 @@ body{
 }
 input{
     font-size: 1rem;
-    width: 20rem;
     font-size: 20px;
 }
 
 .user-cards{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: .25rem;
     margin-top: 1rem;
 }
@@ -25,17 +24,20 @@ input{
     border: 1px solid black;
     border-radius: 5px;
     background-color: white;
-    padding: 1.2rem;
-    width: fit-content;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card > .header{
-    font-size: 1.2rem;
-    font-weight: bold;
+    margin-bottom: .25rem;
+    font-size: 1.5rem;
 }
 
 .card > .body{
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     color: gray;
 }
 
