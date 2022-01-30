@@ -14,7 +14,7 @@ fetch("https://jsonplaceholder.typicode.com/users") //fetch demo json data from 
             header.textContent = user.name
             body.textContent = user.email
             userCardContainer.append(card)
-            return {name: user.name, email: user.email, element: card }
+            return {name: user.name.toLowerCase(), email: user.email.toLowerCase(), element: card }
         })
     })
 
@@ -22,7 +22,7 @@ fetch("https://jsonplaceholder.typicode.com/users") //fetch demo json data from 
     searchInput.addEventListener("input", (e) => {
         const value = e.target.value.toLowerCase()
         users.forEach(user => {
-            const isVisible = user.name.toLowerCase().includes(value) || user.email.toLowerCase().includes(value)
+            const isVisible = user.name.includes(value) || user.email.includes(value)
             user.element.classList.toggle("hide", !isVisible)
         })
     console.log(users)
